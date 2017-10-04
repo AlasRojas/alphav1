@@ -7,6 +7,45 @@
 	padding:0;
 	margin:0;
 }
+.underConstruction{
+	width: 100%;
+	height: 100%;
+	ul{
+		width: 100%;
+		height: 100%;
+		li{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center center;
+			opacity: 0;
+			transition: 1s linear;
+			&.img1{
+				background-image: url("../images/demo1.jpeg");
+			}
+			&.img2{
+				background-image: url("../images/demo2.jpeg");
+			}
+			&.img3{
+				background-image: url("../images/demo3.jpeg");
+			}
+			&.active{
+				opacity: 1;
+			}
+		}
+	}
+	h2{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 60px;
+		font-family: 'Permanent Marker', cursive;
+		text-shadow: 0 0 15px #fff;
+	}
+}
+
 header{}
 .indexSection{}
 footer{}
