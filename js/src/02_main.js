@@ -11,9 +11,6 @@ ALPHA.lanch_modal = function( $elem ){
 
 
 $(document).ready(function(){
-	console.log("demo");
-
-	//$(".underConstruction ul li")
 	/*==========DEMO===========*/
 	var activeLi = 0;
 
@@ -29,7 +26,6 @@ $(document).ready(function(){
 		}
 		$(".underConstruction ul li").eq(activeLi).addClass('active');
 	}
-
 	/*========== END DEMO ===========*/
 
 	
@@ -55,4 +51,24 @@ $(document).ready(function(){
 			}, 1800
 		);
 	});
+
+	/*==========DEMO List===========*/
+	var activeLiDemo = 0;
+
+	setInterval(function(){ 
+		changeLiDemo();
+	}, 3000);
+
+	function changeLiDemo(){
+		$(".nosotrosSection ul li").removeClass('active');
+		$(".contactoSection ul li").removeClass('active');
+		activeLiDemo++;
+		if ( activeLiDemo == 4) {
+			activeLiDemo = 0;
+		}
+		$(".nosotrosSection ul li").eq(activeLiDemo).addClass('active');
+		$(".contactoSection ul li").eq(activeLiDemo).addClass('active');
+	}
+
+	/*========== END DEMO List ===========*/
 });

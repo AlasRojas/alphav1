@@ -68,24 +68,119 @@ section {
 section.nosotrosSection {
   background: #0098ce;
 }
+/* line 60, sass/styles.scss */
+section.nosotrosSection ul li {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* line 65, sass/styles.scss */
+section.nosotrosSection ul li.active {
+  opacity: 1;
+}
 /* line 68, sass/styles.scss */
+section.nosotrosSection ul li.img1 {
+  background-image: url(../images/carusel1_1.jpg);
+}
+/* line 71, sass/styles.scss */
+section.nosotrosSection ul li.img2 {
+  background-image: url(../images/carusel1_2.jpg);
+}
+/* line 74, sass/styles.scss */
+section.nosotrosSection ul li.img3 {
+  background-image: url(../images/carusel1_3.jpg);
+}
+/* line 77, sass/styles.scss */
+section.nosotrosSection ul li.img4 {
+  background-image: url(../images/carusel1_4.jpg);
+}
+/* line 83, sass/styles.scss */
 section.serviciosSection {
   background: #cc98ce;
 }
-/* line 79, sass/styles.scss */
+/* line 87, sass/styles.scss */
+section.serviciosSection ul li.img1 {
+  background-image: url(../images/carusel2_1.jpg);
+}
+/* line 90, sass/styles.scss */
+section.serviciosSection ul li.img2 {
+  background-image: url(../images/carusel2_2.jpg);
+}
+/* line 93, sass/styles.scss */
+section.serviciosSection ul li.img3 {
+  background-image: url(../images/carusel2_3.jpg);
+}
+/* line 96, sass/styles.scss */
+section.serviciosSection ul li.img4 {
+  background-image: url(../images/carusel2_4.jpg);
+}
+/* line 102, sass/styles.scss */
 section.clientesSection {
   background: #669844;
 }
-/* line 90, sass/styles.scss */
+/* line 106, sass/styles.scss */
+section.clientesSection ul li.img1 {
+  background-image: url(../images/carusel3_1.jpg);
+}
+/* line 109, sass/styles.scss */
+section.clientesSection ul li.img2 {
+  background-image: url(../images/carusel3_2.jpg);
+}
+/* line 112, sass/styles.scss */
+section.clientesSection ul li.img3 {
+  background-image: url(../images/carusel3_3.jpg);
+}
+/* line 115, sass/styles.scss */
+section.clientesSection ul li.img4 {
+  background-image: url(../images/carusel3_4.jpg);
+}
+/* line 121, sass/styles.scss */
 section.contactoSection {
   background: #7798ce;
 }
-/* line 103, sass/styles.scss */
-section ul li.active {
+/* line 124, sass/styles.scss */
+section.contactoSection ul li {
+  opacity: 0;
+  transform: scale(0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/* line 131, sass/styles.scss */
+section.contactoSection ul li.active {
   opacity: 1;
+  transform: scale(1);
+}
+/* line 135, sass/styles.scss */
+section.contactoSection ul li.img1 {
+  background-image: url(../images/carusel4_1.jpg);
+}
+/* line 138, sass/styles.scss */
+section.contactoSection ul li.img2 {
+  background-image: url(../images/carusel4_2.jpg);
+}
+/* line 141, sass/styles.scss */
+section.contactoSection ul li.img3 {
+  background-image: url(../images/carusel4_3.jpg);
+}
+/* line 144, sass/styles.scss */
+section.contactoSection ul li.img4 {
+  background-image: url(../images/carusel4_4.jpg);
+}
+/* line 150, sass/styles.scss */
+section ul {
+  list-style: none;
+  transition: 1s;
+}
+/* line 153, sass/styles.scss */
+section ul li {
+  background-size: cover;
+  background-position: center;
+  transition: 1s;
 }
 
-/* line 109, sass/styles.scss */
+/* line 160, sass/styles.scss */
 .modal {
   width: 100%;
   height: 100%;
@@ -93,7 +188,7 @@ section ul li.active {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 115, sass/styles.scss */
+/* line 166, sass/styles.scss */
 .logoImage, .modal_container {
   position: absolute;
   top: 50%;
