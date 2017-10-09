@@ -82,8 +82,18 @@ section{
 	}
 	&.serviciosSection{
 		background: #cc98ce;
+		overflow:hidden;
+		position:relative;
 		ul{
+			width: 400%;
+			position:relative;
+			left:0;
+			top:0;
+			list-style:none;
+			margin:0;
+			padding:0;
 			li{
+				float: left;
 				&.img1{
 					background-image: url(../images/carusel2_1.jpg);
 				}
@@ -101,7 +111,16 @@ section{
 	}
 	&.clientesSection{
 		background: #669844;
+		overflow:hidden;
+		position:relative;
 		ul{
+			width: 400%;
+			position:relative;
+			left:0;
+			top:0;
+			list-style:none;
+			margin:0;
+			padding:0;
 			li{
 				&.img1{
 					background-image: url(../images/carusel3_1.jpg);
@@ -149,7 +168,7 @@ section{
 	}
 	ul{
 		list-style: none;
-		transition: 1s;
+		//transition: 1s;
 		li{
 			background-size: cover;
 			background-position: center;

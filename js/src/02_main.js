@@ -30,14 +30,18 @@ $(document).ready(function(){
 
 	
 	var wHeight = $( window ).height();
+	var wWidth = $( window ).width();
 
 	$( window ).resize(function(){
 		wHeight = $( window ).height();
+		wWidth = $( window ).width();
 		resizeFunctions();
 	});
 
 	function resizeFunctions(){
 		$('section').height( (wHeight/2)+'px' );
+		$('section ul li').height( (wHeight/2)+'px' );
+		$('section ul li').width( (wWidth/2)+'px' );
 	}
 	resizeFunctions();
 
@@ -55,6 +59,25 @@ $(document).ready(function(){
 	/*==========DEMO List===========*/
 	var activeLiDemo = 0;
 
+
+	var item_width = $('.serviciosSection li').outerWidth(); 
+	var left_value = item_width * (-1); 
+	$('.serviciosSection li:first').before($('.serviciosSection li:last'));
+	$('.serviciosSection ul').css({'left' : left_value});
+
+
+
+
+	var item_height = $('.clientesSection li').outerHeight(); 
+	var top_value = item_height * (-1); 
+	$('.clientesSection li:first').before($('.clientesSection li:last'));
+	$('.clientesSection ul').css({'top' : top_value});
+	
+	/*$('.serviciosSection ul:not(:animated)').animate({'left' : left_indent}, 200, function () {
+			$('.serviciosSection li:last').after($('.serviciosSection li:first'));                 	
+			$('.serviciosSection ul').css({'left' : left_value});
+		});*/
+
 	setInterval(function(){ 
 		changeLiDemo();
 	}, 3000);
@@ -68,6 +91,21 @@ $(document).ready(function(){
 		}
 		$(".nosotrosSection ul li").eq(activeLiDemo).addClass('active');
 		$(".contactoSection ul li").eq(activeLiDemo).addClass('active');
+
+
+
+		var left_indent = parseInt($('.serviciosSection ul').css('left')) - item_width;
+		$('.serviciosSection ul:not(:animated)').animate({'left' : left_indent}, 500, function () {
+			$('.serviciosSection li:last').after($('.serviciosSection li:first'));                 	
+			$('.serviciosSection ul').css({'left' : left_value});
+		});
+
+
+		var top_indent = parseInt($('.clientesSection ul').css('top')) - item_height;
+		$('.clientesSection ul:not(:animated)').animate({'top' : top_indent}, 500, function () {
+			$('.clientesSection li:last').after($('.clientesSection li:first'));                 	
+			$('.clientesSection ul').css({'top' : top_value});
+		});
 	}
 
 	/*========== END DEMO List ===========*/
