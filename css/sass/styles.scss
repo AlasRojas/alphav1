@@ -47,5 +47,23 @@
 }
 
 header{}
-.indexSection{}
+//.indexSection{}
+section{
+	float: left;
+	width: 50%;
+	background-size: cover;
+	background-position: center;
+	&.nosotrosSection{
+		background: #0098ce;
+	}
+	&.serviciosSection{
+		background: #cc98ce;
+	}
+	&.clientesSection{
+		background: #669844;
+	}
+	&.contactoSection{
+		background: #7798ce;
+	}
+}
 footer{}

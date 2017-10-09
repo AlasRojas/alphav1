@@ -55,3 +55,27 @@
   font-family: 'Permanent Marker', cursive;
   text-shadow: 0 0 15px #fff;
 }
+
+/* line 51, sass/styles.scss */
+section {
+  float: left;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+/* line 56, sass/styles.scss */
+section.nosotrosSection {
+  background: #0098ce;
+}
+/* line 59, sass/styles.scss */
+section.serviciosSection {
+  background: #cc98ce;
+}
+/* line 62, sass/styles.scss */
+section.clientesSection {
+  background: #669844;
+}
+/* line 65, sass/styles.scss */
+section.contactoSection {
+  background: #7798ce;
+}
