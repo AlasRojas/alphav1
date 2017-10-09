@@ -62,25 +62,30 @@ section {
   width: 50%;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
-/* line 56, sass/styles.scss */
+/* line 57, sass/styles.scss */
 section.nosotrosSection {
   background: #0098ce;
 }
-/* line 59, sass/styles.scss */
+/* line 68, sass/styles.scss */
 section.serviciosSection {
   background: #cc98ce;
 }
-/* line 62, sass/styles.scss */
+/* line 79, sass/styles.scss */
 section.clientesSection {
   background: #669844;
 }
-/* line 65, sass/styles.scss */
+/* line 90, sass/styles.scss */
 section.contactoSection {
   background: #7798ce;
 }
+/* line 103, sass/styles.scss */
+section ul li.active {
+  opacity: 1;
+}
 
-/* line 69, sass/styles.scss */
+/* line 109, sass/styles.scss */
 .modal {
   width: 100%;
   height: 100%;
@@ -88,7 +93,7 @@ section.contactoSection {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 75, sass/styles.scss */
+/* line 115, sass/styles.scss */
 .logoImage, .modal_container {
   position: absolute;
   top: 50%;

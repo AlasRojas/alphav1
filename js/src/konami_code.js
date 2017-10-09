@@ -12,10 +12,8 @@ $(document).ready(function(){
 	var konamiCodePosition = 0;
 
 	document.addEventListener('keydown', function(e) {
-		console.log(e.keyCode);
 		var key = allowedKeys[e.keyCode];
 		var requiredKey = konamiCode[konamiCodePosition];
-
 		if (key == requiredKey) {
 			konamiCodePosition++;
 			if (konamiCodePosition == konamiCode.length) {
@@ -28,7 +26,6 @@ $(document).ready(function(){
 	});
 
 	function activateCheats() {
-		alert("cheats activated");
 		rockPaper();
 	}
 
@@ -42,7 +39,6 @@ $(document).ready(function(){
 
 		$('.gameSelect').click(function($evt){
 			$evt.preventDefault();
-
 			console.log( $(this).data('select') );
 			var userCoice = $(this).data('select');
 
@@ -68,7 +64,6 @@ $(document).ready(function(){
 			}else{
 				console.log('not tie');
 				if (user == 'rock') {
-
 					if (computer == 'paper') {
 						console.log('Paper cover rock');
 						console.log('You lose');
@@ -82,9 +77,7 @@ $(document).ready(function(){
 						console.log('Spock vaporizes rock');
 						console.log('You lose');
 					}
-
 				}else if (user == 'paper') {
-
 					if (computer == 'rock') {
 						console.log('Paper cover rock');
 						console.log('You win');
@@ -98,9 +91,7 @@ $(document).ready(function(){
 						console.log('paper disproves spock');
 						console.log('You win');
 					}
-
 				}else if (user == 'scissors') {
-
 					if (computer == 'rock') {
 						console.log('Rock crushes scissors');
 						console.log('You lose');
@@ -114,9 +105,7 @@ $(document).ready(function(){
 						console.log('spock smashes scissors');
 						console.log('You lose');
 					}
-
 				}else if (user == 'lizard') {
-
 					if (computer == 'rock') {
 						console.log('Rock crushes lizard');
 						console.log('You lose');
@@ -130,9 +119,7 @@ $(document).ready(function(){
 						console.log('lizard poison spock');
 						console.log('You win');
 					}
-
 				}else if (user == 'spock') {
-
 					if (computer == 'rock') {
 						console.log('Spock vaporizes rock');
 						console.log('You win');
@@ -146,12 +133,11 @@ $(document).ready(function(){
 						console.log('lizard poison spock');
 						console.log('You lose');
 					}
-
 				}
 			}
-		}
-			
+		}			
 	}
 		//}
 
 });
+
