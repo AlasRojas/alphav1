@@ -79,3 +79,19 @@ section.clientesSection {
 section.contactoSection {
   background: #7798ce;
 }
+
+/* line 69, sass/styles.scss */
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 75, sass/styles.scss */
+.logoImage, .modal_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,3 +1,15 @@
+var ALPHA = ALPHA || {};
+
+ALPHA.lanch_modal = function( $elem ){
+	var html_modal = '<div class="modal">';
+			html_modal += '<div class="modal_container">';
+				html_modal += $elem;
+			html_modal += '</div>';
+		html_modal += '</div>';
+	$('body').append( html_modal );
+}
+
+
 $(document).ready(function(){
 	console.log("demo");
 
@@ -33,4 +45,14 @@ $(document).ready(function(){
 	}
 	resizeFunctions();
 
+	$('.logoImage').click(function($evt){
+		$evt.preventDefault();
+		var add_html = '<img src="images/gif_demo.gif" />'
+		ALPHA.lanch_modal( add_html );
+		setTimeout(
+			function(){ 
+				$('.modal').remove(); 
+			}, 1800
+		);
+	});
 });
