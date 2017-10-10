@@ -7,6 +7,10 @@
 	padding:0;
 	margin:0;
 }
+body, html{
+	width: 100%;
+	height: 100%;
+}
 .underConstruction{
 	width: 100%;
 	height: 100%;
@@ -54,9 +58,10 @@ section{
 	background-size: cover;
 	background-position: center;
 	position: relative;
+	overflow:hidden;
 	&.nosotrosSection{
 		background: #0098ce;
-		ul{
+		.carrusel_list{
 			li{
 				opacity: 0;
 				position: absolute;
@@ -82,9 +87,7 @@ section{
 	}
 	&.serviciosSection{
 		background: #cc98ce;
-		overflow:hidden;
-		position:relative;
-		ul{
+		.carrusel_list{
 			width: 400%;
 			position:relative;
 			left:0;
@@ -111,9 +114,7 @@ section{
 	}
 	&.clientesSection{
 		background: #669844;
-		overflow:hidden;
-		position:relative;
-		ul{
+		.carrusel_list{
 			width: 400%;
 			position:relative;
 			left:0;
@@ -139,7 +140,7 @@ section{
 	}
 	&.contactoSection{
 		background: #7798ce;
-		ul{
+		.carrusel_list{
 			li{
 				opacity: 0;
 				transform: scale(0);
@@ -166,13 +167,52 @@ section{
 			}
 		}
 	}
-	ul{
+	.carrusel_list{
 		list-style: none;
-		//transition: 1s;
 		li{
 			background-size: cover;
 			background-position: center;
 			transition: 1s;
+		}
+	}
+	.shadow{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.4);
+		h2{
+			color: #fff;
+			font-size: 30px;
+			position: absolute; 
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.elem_cont{
+		display: none;
+	}
+	&.openSection{
+		.carrusel_list{
+			display: none;
+		}
+		.shadow{
+			position: initial;
+			width: auto;
+			height: auto;
+			background-color: transparent;
+			h2{
+				color: #fff;
+				font-size: 30px;
+				text-align: center;
+				position: initial;
+				transform: translate(0, 0);
+			}
+		}
+		.elem_cont{
+			display: block;
 		}
 	}
 }
